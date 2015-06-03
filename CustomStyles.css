@@ -1,5 +1,10 @@
     body {
       text-align: center;
+
+    }
+
+    .edit{
+      width: 500px;
     }
 
     .jumbotron{
@@ -25,12 +30,11 @@
 
     table {
       table-layout: fixed; 
+      word-wrap: break-word;
     }
+
     th, td{
-      border: white;
       overflow: hidden;
-      width: 100px;
-      height: 30px;
     }
 
     input[type="checkbox"] {
@@ -43,6 +47,10 @@
 
     img {
       margin-bottom: 3px;
+    }
+
+    .view {
+      color: #aaced4;
     }
 
 /*    .navbar-inner{

@@ -18,7 +18,15 @@
     #todo-list .editing input.edit {
       display: inline;
     }
-
+    #toodoo{
+      z-index:-1;
+      background: #123456;
+      padding: 20px;
+      width: 750px;
+      display: block;
+      overflow: auto;
+      margin: 0 auto;
+    }
   </style>
 
   <link rel="stylesheet" type="text/css" href="bootstrap-3.3.4-dist/css/bootstrap.css">
@@ -68,25 +76,30 @@
       </nav>
       <!--Navbar stuff doneeeee-->
 
-      <br>
-      <input id="new-todo" placeholder="What todoooo?" autofocus>
-    </header>
-    <section id="main">
-      <br>
-      <ul id="todo-list" style="list-style-type:none" class="list-group"></ul>
-    </section>
-  </section> 
+
+      </header>
+      <section id="main">
+
+        <div id="toodoo">
+          <input id="new-todo" placeholder="What todoooo?" autofocus>      
+          <br>
+          <br>
+          <ul id="todo-list" style="list-style-type:none"></ul>
+        </div>
+      </section>
+    </section> 
+
 
     <script type="text/template" id="item-template">
-      <div class="view table-responsive">
-        <table class="table">
+      <div class="view">
+        <table class="table" width="100%">
           <tr>
-            <td> <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>> </td>
-            <td> <label><%- title %></label> 
+            <td width="10%s"> <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>> </td>
+            <td style="text-align:left"> <label><%- title %></label> 
             <input class="edit" value="<%- title %>"> </td>
-            <td> <img class ="destroy" src="x_button.png" alt="X" style="width:15px;height:15px;"> </td>
+            <td width = "10%"> <img class ="destroy" src="x_button.png" alt="X" style="width:15px;height:15px;"> </td>
           </tr>
-        </table>
+        <table>
       </div>
     </script>
 
