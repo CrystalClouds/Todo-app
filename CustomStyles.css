@@ -1,0 +1,51 @@
+    body {
+      text-align: center;
+    }
+
+    .jumbotron{
+      margin-bottom: 0;
+      background-image: url('nothing-patrick.jpg');
+    }
+
+    .jumbotron h1 {
+      color: #2dd5eb;
+    }
+
+    .jumbotron p {
+      color: #2dd5eb;
+    }
+
+    .navbar-inverse{
+      margin-top: 0;
+    }
+
+    a{
+      color: #2dd5eb;
+    }
+
+.destroy button {
+
+
+  right: 5px;
+  top: 20px;
+
+
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+    background-image: url(x_button.png);
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-color: transparent;
+
+}
+
+/*    .navbar-inner{
+      text-align: center;
+    }
+    .navbar-inner .container {
+      width:960px;
+    }*/
