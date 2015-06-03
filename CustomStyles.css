@@ -19,29 +19,31 @@
       margin-top: 0;
     }
 
-    a{
+    a {
       color: #2dd5eb;
     }
 
-.destroy button {
+    table {
+      table-layout: fixed; 
+    }
+    th, td{
+      border: white;
+      overflow: hidden;
+      width: 100px;
+      height: 30px;
+    }
 
+    input[type="checkbox"] {
+      margin: 1px 1px 1px 1px;
+    }
 
-  right: 5px;
-  top: 20px;
+    label {
+      margin: 1px 1px 1px 1px;
+    }
 
-
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-    background-image: url(x_button.png);
-  background-position: center center;
-  background-size: 100%;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-clip: border-box;
-  background-color: transparent;
-
-}
+    img {
+      margin-bottom: 3px;
+    }
 
 /*    .navbar-inner{
       text-align: center;

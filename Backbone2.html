@@ -78,15 +78,17 @@
   </section> 
 
     <script type="text/template" id="item-template">
-      <div class="view">
-        <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
-        <label><%- title %></label>
-        <input class="edit" value="<%- title %>">
-        <button class="destroy"></button>
-          
-        </div>
+      <div class="view table-responsive">
+        <table class="table">
+          <tr>
+            <td> <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>> </td>
+            <td> <label><%- title %></label> 
+            <input class="edit" value="<%- title %>"> </td>
+            <td> <img class ="destroy" src="x_button.png" alt="X" style="width:15px;height:15px;"> </td>
+          </tr>
+        </table>
       </div>
-     </script>
+    </script>
 
 
   <!-- ========= -->
