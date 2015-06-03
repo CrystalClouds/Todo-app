@@ -1,4 +1,4 @@
-    var app = {}; // create namespace for our app
+    var app = {}; // create namespace for our app 
 
     app.Todo = Backbone.Model.extend({
       defaults: {
