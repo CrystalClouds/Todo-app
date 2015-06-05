@@ -3,7 +3,8 @@
     app.Todo = Backbone.Model.extend({
       defaults: {
         title: '',
-        completed: false
+        completed: false,
+        timestamp: new Date().valueOf()
       },
       toggle: function(){
         this.save({ completed: !this.get('completed')});
@@ -51,6 +52,7 @@
 
     //renders individual todo items list (li)
     app.TodoView = Backbone.View.extend({
+
       tagName: 'li',
       template: _.template($('#item-template').html()),
       render: function(){
@@ -61,13 +63,15 @@
       initialize: function(){
         this.model.on('change', this.render, this);
         this.model.on('destroy', this.remove, this);
+//        setInterval(checkTime(), 1000);
+        window.setInterval(this.checkTime(), 1000);
       },
       events: {
         'dblclick label' : 'edit',
         'keypress .edit' : 'updateOnEnter',
         'blur .edit' : 'close',
         'click .toggle' : 'toggleCompleted',
-        'click .destroy': 'destroy'
+        'click .destroy': 'destroy',
       },
       edit: function(){
         this.$el.addClass('editing');
@@ -90,7 +94,16 @@
       },
       destroy: function(){
         this.model.destroy();
+      },
+      checkTime: function() {
+        var blargh = new Date(this.model.get('timestamp')).valueOf();
+        var difference = (new Date()).valueOf() - blargh;
+        if(difference > 5000)
+        {
+          this.$el.addClass('timed');
+        }
       }
+
     });
 
  /*   var object = {};
@@ -141,7 +154,8 @@
       newAttributes: function(){
         return {
           title: this.input.val().trim(),
-          completed: false
+          completed: false,
+          timestamp: new Date().valueOf()
         };
       }
     });
