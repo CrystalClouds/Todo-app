@@ -64,7 +64,12 @@
         this.model.on('change', this.render, this);
         this.model.on('destroy', this.remove, this);
 //        setInterval(checkTime(), 1000);
-        window.setInterval(this.checkTime(), 1000);
+        // window.setInterval(this.checkTime(), 1000);
+        var self = this;
+        self.checkTime();
+        window.setInterval(function(){
+            self.checkTime();
+        }, 1000);
       },
       events: {
         'dblclick label' : 'edit',
@@ -96,6 +101,7 @@
         this.model.destroy();
       },
       checkTime: function() {
+        console.log(222);
         var blargh = new Date(this.model.get('timestamp')).valueOf();
         var difference = (new Date()).valueOf() - blargh;
         if(difference > 5000)
