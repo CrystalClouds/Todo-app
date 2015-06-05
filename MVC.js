@@ -68,7 +68,7 @@
         var self = this;
         self.checkTime();
         window.setInterval(function(){
-            self.checkTime();
+              self.checkTime();
         }, 1000);
       },
       events: {
@@ -101,12 +101,16 @@
         this.model.destroy();
       },
       checkTime: function() {
-        console.log(222);
         var blargh = new Date(this.model.get('timestamp')).valueOf();
         var difference = (new Date()).valueOf() - blargh;
-        if(difference > 5000)
+        var self = this;
+        if(difference > 10000 && this.model.get('completed') == false)
         {
           this.$el.addClass('timed');
+        }
+        if(this.model.get('completed') == true && difference > 10000)
+        {
+          this.$el.removeClass('timed');
         }
       }
 
