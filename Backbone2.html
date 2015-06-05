@@ -33,6 +33,7 @@
   <link rel="stylesheet" type="text/css" href="bootstrap-3.3.4-dist/css/bootstrap-theme.css">
   <link rel="stylesheet" type="text/css" href="CustomStyles.css">
   <script src="bootstrap-3.3.4-dist/js/bootstrap.js"></script>
+  <script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
 
 
 </head>
@@ -95,7 +96,7 @@
         <table class="table" width="100%">
           <tr>
             <td width="10%s"> <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>> </td>
-            <td style="text-align:left"> <label><%- title %></label> 
+            <td style="text-align:left"> <label class="red"><%- title %></label> 
             <input class="edit" value="<%- title %>"> </td>
             <td width = "10%"> <img class ="destroy" src="x_button.png" alt="X" style="width:15px;height:15px;"> </td>
           </tr>
