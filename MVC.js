@@ -64,7 +64,11 @@
         this.model.on('change', this.render, this);
         this.model.on('destroy', this.remove, this);
 //        setInterval(checkTime(), 1000);
-        window.setInterval(this.checkTime(), 1000);
+        var self = this;
+        self.checkTime();
+        setInterval(function(){
+          self.checkTime()
+        }, 1000);
       },
       events: {
         'dblclick label' : 'edit',
