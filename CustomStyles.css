@@ -53,6 +53,10 @@
       color: #3f9dca;
     }
 
+    li.timed label{
+      color: #f50900;
+    }
+
 /*    .navbar-inner{
       text-align: center;
     }
